@@ -8,7 +8,7 @@
 letter [a-zA-Z]+
 
 %%
-(\-)?{letter}						{yylval.id=yytext;len=yyleng;return WORD;}
+(\-)?(\-)?{letter}						{yylval.id=yytext;len=yyleng;return WORD;}
 [ \t\n]							{;}
 .							{return NOTOKEN;}
 
